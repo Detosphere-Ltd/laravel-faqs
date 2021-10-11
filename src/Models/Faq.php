@@ -2,6 +2,7 @@
 
 namespace DetosphereLtd\LaravelFaqs\Models;
 
+use DetosphereLtd\LaravelFaqs\Database\Factories\FaqFactory;
 use DetosphereLtd\LaravelFaqs\Traits\HasUuid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -37,7 +38,7 @@ class Faq extends Model
 
     protected static function newFactory()
     {
-        return \DetosphereLtd\LaravelFaqs\Database\Factories\FaqFactory::new();
+        return FaqFactory::new();
     }
 
     public function scopeType(Builder $query, string $type)
