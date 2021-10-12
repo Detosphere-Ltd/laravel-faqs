@@ -127,6 +127,14 @@ class FaqController extends Controller
 
 ```
 
+### Scopes
+
+The Faq model has `scopeType` to query faqs by type. It is as easy as shown below.
+
+```php
+$faqs = \DetosphereLtd\LaravelFaqs\Models\Faq::type('type')->get();
+```
+
 ## Testing
 
 ```bash
