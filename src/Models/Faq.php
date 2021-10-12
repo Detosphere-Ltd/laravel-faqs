@@ -11,7 +11,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Faq extends Model
 {
-    use HasFactory, HasUuid, SoftDeletes;
+    use HasFactory;
+    use HasUuid;
+    use SoftDeletes;
 
     /**
      * The attributes that are fillable.

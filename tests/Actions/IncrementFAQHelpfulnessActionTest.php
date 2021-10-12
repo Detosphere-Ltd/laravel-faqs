@@ -4,9 +4,9 @@ namespace DetosphereLtd\LaravelFaqs\Tests\Actions;
 
 use DetosphereLtd\LaravelFaqs\Actions\IncrementFAQHelpfulnessAction;
 use DetosphereLtd\LaravelFaqs\Models\Faq;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use DetosphereLtd\LaravelFaqs\Tests\TestCase;
 use Illuminate\Database\QueryException;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class IncrementFAQHelpfulnessActionTest extends TestCase
 {

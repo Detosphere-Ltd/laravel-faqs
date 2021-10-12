@@ -3,8 +3,8 @@
 namespace DetosphereLtd\LaravelFaqs\Tests\Models;
 
 use DetosphereLtd\LaravelFaqs\Models\Faq;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use DetosphereLtd\LaravelFaqs\Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class FaqTest extends TestCase
 {

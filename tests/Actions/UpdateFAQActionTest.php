@@ -4,8 +4,8 @@ namespace DetosphereLtd\LaravelFaqs\Tests\Actions;
 
 use DetosphereLtd\LaravelFaqs\Actions\UpdateFAQAction;
 use DetosphereLtd\LaravelFaqs\Models\Faq;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use DetosphereLtd\LaravelFaqs\Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class UpdateFAQActionTest extends TestCase
 {
@@ -27,7 +27,7 @@ class UpdateFAQActionTest extends TestCase
         $this->action->execute($faq, [
             'question' => 'What does your app do?',
             'answer' => 'It helps manage Frequently asked questions on any application.',
-            'type' => 'type'
+            'type' => 'type',
         ]);
 
         tap($faq->fresh(), function ($faq) {

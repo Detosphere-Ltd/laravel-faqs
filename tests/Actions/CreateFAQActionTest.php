@@ -3,8 +3,8 @@
 namespace DetosphereLtd\LaravelFaqs\Tests\Actions;
 
 use DetosphereLtd\LaravelFaqs\Actions\CreateFAQAction;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use DetosphereLtd\LaravelFaqs\Tests\TestCase;
+use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class CreateFAQActionTest extends TestCase
 {
@@ -24,7 +24,7 @@ class CreateFAQActionTest extends TestCase
         $this->action->execute([
             'question' => 'What does your app do?',
             'answer' => 'It helps manage Frequently asked questions on any application.',
-            'type' => 'type'
+            'type' => 'type',
         ]);
 
         $this->assertDatabaseCount('faqs', 1);
