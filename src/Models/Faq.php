@@ -2,8 +2,8 @@
 
 namespace DetosphereLtd\LaravelFaqs\Models;
 
+use AlhajiAki\LaravelUuid\HasUuid;
 use DetosphereLtd\LaravelFaqs\Database\Factories\FaqFactory;
-use DetosphereLtd\LaravelFaqs\Traits\HasUuid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -39,6 +39,11 @@ class Faq extends Model
     protected static function newFactory()
     {
         return FaqFactory::new();
+    }
+
+    public function getUuidColumn(): string
+    {
+        return 'uuid';
     }
 
     public function scopeType(Builder $query, string $type)
