@@ -11,9 +11,15 @@ class IncrementFAQHelpfulnessAction
      *
      * @param \DetosphereLtd\LaravelFaqs\Models\Faq $faq
      * @param string $helpfulness
+     *
+     * @return \DetosphereLtd\LaravelFaqs\Models\Faq;
+     *
+     * @throws \Illuminate\Database\QueryException
      */
     public function execute(Faq $faq, string $helpfulness)
     {
         $faq->increment('helpful_' . $helpfulness);
+
+        return $faq->fresh();
     }
 }

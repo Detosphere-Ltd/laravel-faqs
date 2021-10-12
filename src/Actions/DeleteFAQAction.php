@@ -10,6 +10,7 @@ class DeleteFAQAction
      * Delete faq
      *
      * @param \DetosphereLtd\LaravelFaqs\Models\Faq $faq
+     *
      * @return void
      */
     public function execute(Faq $faq)

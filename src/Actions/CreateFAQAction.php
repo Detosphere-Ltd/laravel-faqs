@@ -10,6 +10,7 @@ class CreateFAQAction
      * Create new faq
      *
      * @param array $data
+     *
      * @return \App\Models\Faq
      */
     public function execute(array $data)

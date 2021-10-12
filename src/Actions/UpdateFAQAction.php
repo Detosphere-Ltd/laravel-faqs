@@ -12,6 +12,7 @@ class UpdateFAQAction
      *
      * @param \DetosphereLtd\LaravelFaqs\Models\Faq $faq
      * @param array $data
+     *
      * @return \DetosphereLtd\LaravelFaqs\Models\Faq
      */
     public function execute(Faq $faq, array $data)
