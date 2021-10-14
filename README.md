@@ -23,6 +23,18 @@ After publishing the migration you can create the faqs table by running the migr
 php artisan migrate
 ```
 
+## Models and Migrations
+
+This package has only one model (`Faq`) and its corresponding migration file. You are allowed to extend it and use it any how you want. The model only guarded properties on the model are the `id` and `uuid`.
+
+### Scopes
+
+The Faq model has `scopeType` to query faqs by type. It is as easy as shown below.
+
+```php
+$faqs = \DetosphereLtd\LaravelFaqs\Models\Faq::type('type')->get();
+```
+
 ## Action classes
 
 This package exposes four action classes. Find details about them below.
@@ -125,14 +137,6 @@ class FaqController extends Controller
     }
 }
 
-```
-
-### Scopes
-
-The Faq model has `scopeType` to query faqs by type. It is as easy as shown below.
-
-```php
-$faqs = \DetosphereLtd\LaravelFaqs\Models\Faq::type('type')->get();
 ```
 
 ## Testing

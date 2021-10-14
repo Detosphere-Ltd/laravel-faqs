@@ -16,16 +16,13 @@ class Faq extends Model
     use SoftDeletes;
 
     /**
-     * The attributes that are fillable.
+     * The attributes that are guarded.
      *
      * @var array
      */
-    protected $fillable = [
-        'question',
-        'answer',
-        'type',
-        'helpful_yes',
-        'helpful_no',
+    protected $guarded = [
+        'id',
+        'uuid',
     ];
 
     /**
